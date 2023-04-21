@@ -1,0 +1,18 @@
+# de-17
+#include <stdio.h>
+
+float sum(float arr[], int n) {
+    if (n == 0) {
+        return 0;
+    } else {
+        return arr[n-1] + sum(arr, n-1);
+    }
+}
+
+int main() {
+    float arr[] = {1.2, 2.5, 3.8, 4.7, 5.9};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    float s = sum(arr, n);
+    printf("Sum = %f", s);
+    return 0;
+}
